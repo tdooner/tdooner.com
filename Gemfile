@@ -7,10 +7,6 @@ gem 'middleman-deploy'
 gem 'therubyracer'
 gem 'haml'
 
-group :development do
-  gem 'erb2haml'
-end
-
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
