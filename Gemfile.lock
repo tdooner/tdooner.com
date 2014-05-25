@@ -16,6 +16,8 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.2.19)
+    compass-h5bp (0.1.2)
+      compass
     compass-import-once (1.0.4)
       sass (>= 3.2, < 3.5)
     em-websocket (0.5.1)
@@ -25,6 +27,8 @@ GEM
     eventmachine (1.0.3)
     execjs (2.0.2)
     ffi (1.9.3)
+    font-awesome-middleman (4.1.1)
+      middleman-core (>= 3.0.0)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
@@ -111,6 +115,9 @@ GEM
     sprockets-sass (1.1.0)
       sprockets (~> 2.0)
       tilt (~> 1.1)
+    susy (1.0.9)
+      compass (>= 0.12.2)
+      sass (>= 3.2.0)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -127,10 +134,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
+  compass-h5bp
+  font-awesome-middleman
   haml
   middleman (~> 3.3.2)
   middleman-deploy
   middleman-livereload (~> 3.1.0)
+  susy
   therubyracer
   tzinfo-data
   wdm (~> 0.1.0)

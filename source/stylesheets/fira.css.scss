@@ -1,0 +1,113 @@
+// Please see Fira.LICENCE in this repository's root directory for relevant
+// usage information
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: font_url('Fira/eot/FiraSans-Light.eot');
+    src: local('Fira Sans Light'),
+         font_url('Fira/eot/FiraSans-Light.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraSans-Light.woff') format('woff'),
+         font_url('Fira/ttf/FiraSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: font_url('Fira/eot/FiraSans-LightItalic.eot');
+    src: local('Fira Sans Light Italic'),
+         font_url('Fira/eot/FiraSans-LightItalic.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraSans-LightItalic.woff') format('woff'),
+         font_url('Fira/ttf/FiraSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: font_url('Fira/eot/FiraSans-Regular.eot');
+    src: local('Fira Sans Regular'),
+         font_url('Fira/eot/FiraSans-Regular.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraSans-Regular.woff') format('woff'),
+         font_url('Fira/ttf/FiraSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: font_url('Fira/eot/FiraSans-RegularItalic.eot');
+    src: local('Fira Sans Regular Italic'),
+         font_url('Fira/eot/FiraSans-RegularItalic.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraSans-RegularItalic.woff') format('woff'),
+         font_url('Fira/ttf/FiraSans-RegularItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: font_url('Fira/eot/FiraSans-Medium.eot');
+    src: local('Fira Sans Medium'),
+         font_url('Fira/eot/FiraSans-Medium.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraSans-Medium.woff') format('woff'),
+         font_url('Fira/ttf/FiraSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: font_url('Fira/eot/FiraSans-MediumItalic.eot');
+    src: local('Fira Sans Medium Italic'),
+         font_url('Fira/eot/FiraSans-MediumItalic.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraSans-MediumItalic.woff') format('woff'),
+         font_url('Fira/ttf/FiraSans-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: font_url('Fira/eot/FiraSans-Bold.eot');
+    src: local('Fira Sans Bold'),
+         font_url('Fira/eot/FiraSans-Bold.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraSans-Bold.woff') format('woff'),
+         font_url('Fira/ttf/FiraSans-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: font_url('Fira/eot/FiraSans-BoldItalic.eot');
+    src: local('Fira Sans Bold Italic'),
+         font_url('Fira/eot/FiraSans-BoldItalic.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraSans-BoldItalic.woff') format('woff'),
+         font_url('Fira/ttf/FiraSans-BoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'Fira Mono';
+    src: font_url('Fira/eot/FiraMono-Regular.eot');
+    src: local('Fira Mono'),
+         font_url('Fira/eot/FiraMono-Regular.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraMono-Regular.woff') format('woff'),
+         font_url('Fira/ttf/FiraMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Mono';
+    src: font_url('Fira/eot/FiraMono-Bold.eot');
+    src: local('Fira Mono Bold'),
+         font_url('Fira/eot/FiraMono-Bold.eot') format('embedded-opentype'),
+         font_url('Fira/woff/FiraMono-Bold.woff') format('woff'),
+         font_url('Fira/ttf/FiraMono-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+

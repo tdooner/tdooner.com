@@ -2,6 +2,8 @@
 # Compass
 ###
 
+require 'susy'
+
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
@@ -50,6 +52,7 @@
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+set :fonts_dir, 'fonts'
 
 # Build-specific configuration
 configure :build do

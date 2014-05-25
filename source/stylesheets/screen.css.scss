@@ -1,13 +1,22 @@
-@charset "utf-8";
+@import "compass";
+@import "h5bp";
 
-html, body {
-  height: 100%;
-}
+// HTML5 Boilerplate Styles
+@include h5bp-normalize;
+@include h5bp-base-styles;
+
+// Susy Grid Systems - choose one to customize
+// @import "grid/fixed"
+// @import "grid/magic";
+
+// Font Awesome icons
+@import "font-awesome";
+@import 'fira';
 
 body {
   background: #d4d4d4;
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -27,6 +36,7 @@ h1 {
   height: 100%;
   width: 240px;
   position: fixed;
+  top: 0;
   color: #fff;
 }
 

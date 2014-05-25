@@ -1,19 +1,53 @@
-!!!
-%html
+!!! 5
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+<!--[if gt IE 8]><!-->
+%html{:class => "no-js"}
+  <!--<![endif]-->
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "utf-8"}/
-    / Use title if it's in the page YAML frontmatter
+    %meta{:charset => "utf-8"}
+    %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge"}
     %title= current_page.data.title
-    = stylesheet_link_tag     "normalize", "all"
-    = javascript_include_tag  "all"
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "author", :content => ""}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    = stylesheet_link_tag "screen"
+    = javascript_include_tag "all"
 
-  %body{:class => page_classes}
-    %aside.left
-      .bottom
-        %p.name
-          Tom Dooner
-        %p.title
-          Software Engineer
-    .right
-      = yield
+  %body{:class => current_page.data.bodyclass}
+    /[if lt IE 8]
+      %p.browsehappy
+        You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+
+    .container
+      %header
+        %h1= current_page.data.title
+
+      #main-content{:role => "main"}
+        -# Page content gets rendered here
+        %aside.left
+          .bottom
+            %p.name
+              Tom Dooner
+            %p.title
+              Software Engineer
+        .right
+          = yield
+
+      %footer
+        %p &copy; 2014 Tom Dooner
+
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    :javascript
+      window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>')
+
+    -# Google Analytics: change UA-XXXXX-X to be your site's ID.
+    -# :javascript
+      -# (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      -# function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      -# e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      -# e.src='//www.google-analytics.com/analytics.js';
+      -# r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      -# ga('create','UA-XXXXX-X');ga('send','pageview');
