@@ -9,8 +9,8 @@
     %meta{:charset => "utf-8"}
     %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge"}
     %title= current_page.data.title + " | Tom Dooner"
-    %meta{:name => "description", :content => ""}
-    %meta{:name => "author", :content => ""}
+    %meta{:name => "description", :content => current_page.data.subtitle}
+    %meta{:name => "author", :content => 'Tom Dooner'}
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     = stylesheet_link_tag "screen"
     = javascript_include_tag "all"
@@ -26,22 +26,22 @@
         -# Page content gets rendered here
         %aside.left
           .bottom
-            %p.name
-              %a{ href: '/' } Tom Dooner
+            %p.name= link_to 'Tom Dooner', '/'
             %p.title
               Software Engineer
               %a.company{ href: 'https://www.causes.com/tdooner', target: '_blank' } @ causes
 
         .right
           - unless current_page.url == '/'
-            %a.back-to-blog{ href: '/' }
+            = link_to '/', class: 'back-to-blog' do
               %i.fa.fa-long-arrow-left
               Back to Blog
-          = yield
 
-      /
-        %footer
-          %p &copy; 2014 Tom Dooner
+          - unless current_page.data.hide_title
+            %h1= current_page.data.title
+            %h2= current_page.data.subtitle
+
+          = yield
 
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
     :javascript
@@ -51,11 +51,10 @@
         $('.left').addClass('minimize');
       });
 
-    -# Google Analytics: change UA-XXXXX-X to be your site's ID.
-    -# :javascript
-      -# (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      -# function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      -# e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      -# e.src='//www.google-analytics.com/analytics.js';
-      -# r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      -# ga('create','UA-XXXXX-X');ga('send','pageview');
+    :javascript
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-586893-1');ga('send','pageview');

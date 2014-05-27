@@ -40,12 +40,20 @@ require 'susy'
 #   activate :livereload
 # end
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+ helpers do
+   # Override link_to so that remote links open in new tabs.
+   # Conveniently, Kramdown is patched to use this link_to as well.
+   def link_to(*args, &block)
+     url = block_given? ? args[0] : args[1]
+     options = block_given? ? args[1] : args[2]
+
+     if url.start_with?('http')
+       options.merge!(target: '_blank')
+     end
+
+     super
+   end
+ end
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'

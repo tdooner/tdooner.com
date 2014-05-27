@@ -1,18 +1,17 @@
 ---
 title: Webpack in the Rails Asset Pipeline
+subtitle: This snippet of code integrates Webpack into the Sprockets build process
 date: 2014/05/26
 category: ruby-on-rails
 ---
 
-Webpack in the Rails Asset Pipeline
-==========
-
-Rails applications have long had a cohesive asset compilation strategy provided
-by Sprockets (as a part of [Ruby on Rails's Asset Pipeline][assetpipeline]).
-However, as the depth of JavaScript [build][requirejs] [tools][grunt] increases,
-application authors can and should take advantage of more diverse code
-structures than what Sprockets is designed for to promote better long-term
-maintainability through the modularity of components.
+Rails applications have long had a unilateral asset compilation strategy
+provided by Sprockets (as a part of [Ruby on Rails's Asset
+Pipeline][assetpipeline]).  However, as the depth of JavaScript
+[build][requirejs] [tools][grunt] increases, application authors can and should
+take advantage of more diverse code structures than what Sprockets is designed
+for to promote better long-term maintainability through the modularity of
+components.
 
 At Causes, we wanted to integrate the [Webpack module bundler][webpack] to
 combine our CommonJS modules.

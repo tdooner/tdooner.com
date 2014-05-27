@@ -1,12 +1,13 @@
 ---
-title: Welcome
+title: Blog
+hide_title: true
 ---
 
 - blog.articles[0...5].each do |article|
   %article
-    /
-      %h1
-        %a{ href: article.url }= article.title
+    %h3= link_to article.data.title, article.url
+    %h4= article.data.subtitle
+
     %time= article.date.strftime('%b %e, %Y')
 
     = article.summary

@@ -17,6 +17,7 @@
 $color-background: #fff;
 $color-left-panel: #343838;
 $color-dark-blue: #005f6b;
+$color-medium-blue: #008C9E;
 $left-column-width: 240px;
 
 body {
@@ -24,31 +25,59 @@ body {
   text-align: center;
   font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
   padding-right: 60px;
+  line-height: 1.6em;
+}
+
+%grey-header {
+  color: rgba(0, 0, 0, .3);
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  text-transform: uppercase;
 }
 
 h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
+  @extend %grey-header;
+
   font-size: 70px;
-  letter-spacing: -1px;
-  line-height: 1em;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  //padding: 350px 0 10px;
   margin: 0;
+}
+
+h3 {
+  @extend %grey-header;
+  font-size: 36px;
+  margin-bottom: .5em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+a {
+  color: $color-medium-blue;
+
+  &:hover {
+    color: $color-dark-blue;
+  }
 }
 
 .back-to-blog {
   color: #008C9E;
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   position: relative;
   right: 19px;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
-    color: #005F6B;
   }
 }
 
@@ -81,6 +110,7 @@ $left-column-padding: 20px;
 .right {
   margin: 2em 0 0 280px;
   text-align: left;
+  width: 860px;
 }
 
 .bottom {
@@ -94,11 +124,6 @@ $left-column-padding: 20px;
 
 .name, .title {
   color: $color-background;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
 }
 
 .name {
@@ -106,6 +131,11 @@ $left-column-padding: 20px;
   font-weight: 600;
   line-height: 1em;
   margin-bottom: .5em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .title {
