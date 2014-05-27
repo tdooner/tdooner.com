@@ -13,6 +13,7 @@ gem 'susy'
 gem 'compass-h5bp'
 gem 'font-awesome-middleman'
 gem 'nokogiri'
+gem 'builder'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

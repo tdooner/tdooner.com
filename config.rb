@@ -1,6 +1,7 @@
 Time.zone = 'Pacific Time (US & Canada)'
 
 require 'susy'
+require 'builder'
 
 # Change Compass configuration
 # compass_config do |config|
@@ -10,6 +11,7 @@ require 'susy'
 ###
 # Page options, layouts, aliases and proxies
 ###
+ page "/sitemap.xml", :layout => false
 
 # Per-page layout changes:
 #
