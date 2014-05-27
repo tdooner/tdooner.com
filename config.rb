@@ -3,6 +3,7 @@
 ###
 
 require 'susy'
+require 'rouge'
 
 # Change Compass configuration
 # compass_config do |config|
@@ -54,6 +55,12 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
 
+set :haml, ugly: true
+
+activate :syntax do |syntax|
+  syntax.css_class = 'highlighted-code'
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -67,11 +74,14 @@ configure :build do
 
   # Use relative URLs
   activate :relative_assets
-
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
 
 activate :deploy do |deploy|
   deploy.method = :git
+end
+
+activate :blog do |blog|
+  blog.layout = 'layout'
 end

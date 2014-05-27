@@ -8,7 +8,7 @@
   %head
     %meta{:charset => "utf-8"}
     %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge"}
-    %title= current_page.data.title
+    %title= current_page.data.title + " | Tom Dooner"
     %meta{:name => "description", :content => ""}
     %meta{:name => "author", :content => ""}
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
@@ -22,26 +22,34 @@
         Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 
     .container
-      %header
-        %h1= current_page.data.title
-
       #main-content{:role => "main"}
         -# Page content gets rendered here
         %aside.left
           .bottom
             %p.name
-              Tom Dooner
+              %a{ href: '/' } Tom Dooner
             %p.title
               Software Engineer
+              %a.company{ href: 'https://www.causes.com/tdooner', target: '_blank' } @ causes
+
         .right
+          - unless current_page.url == '/'
+            %a.back-to-blog{ href: '/' }
+              %i.fa.fa-long-arrow-left
+              Back to Blog
           = yield
 
-      %footer
-        %p &copy; 2014 Tom Dooner
+      /
+        %footer
+          %p &copy; 2014 Tom Dooner
 
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
     :javascript
       window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>')
+
+      $(document).on('scroll', function() {
+        $('.left').addClass('minimize');
+      });
 
     -# Google Analytics: change UA-XXXXX-X to be your site's ID.
     -# :javascript

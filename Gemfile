@@ -4,12 +4,15 @@ source 'http://rubygems.org'
 
 gem "middleman", "~>3.3.2"
 gem 'middleman-deploy'
+gem 'middleman-blog'
+gem 'middleman-syntax'
 gem 'therubyracer'
 gem 'haml'
 gem 'compass'
 gem 'susy'
 gem 'compass-h5bp'
 gem 'font-awesome-middleman'
+gem 'nokogiri'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
