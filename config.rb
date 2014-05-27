@@ -1,9 +1,6 @@
-###
-# Compass
-###
+Time.zone = 'Pacific Time (US & Canada)'
 
 require 'susy'
-require 'rouge'
 
 # Change Compass configuration
 # compass_config do |config|
