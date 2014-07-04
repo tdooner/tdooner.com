@@ -1,7 +1,7 @@
 ---
 title: Webpack in the Rails Asset Pipeline
 subtitle: This snippet of code integrates Webpack into the Sprockets build process
-date: 2014/05/26
+date: 2014/06/29
 category: ruby-on-rails
 ---
 
@@ -9,18 +9,20 @@ Rails applications have long had a unilateral asset compilation strategy
 provided by Sprockets (as a part of [Ruby on Rails's Asset
 Pipeline][assetpipeline]).  However, as the depth of JavaScript
 [build][requirejs] [tools][grunt] increases, application authors can and should
-take advantage of more diverse code structures than what Sprockets is designed
-for to promote better long-term maintainability through the modularity of
-components.
+take advantage of more diverse asset combination techniques than what Sprockets
+is designed to provide. This can lead to better long-term maintainability
+through modularity of frontend components (which is [all the rage][polymer]
+[these days][react]).
 
-At Causes, we wanted to integrate the [Webpack module bundler][webpack] to
+At Brigade, we wanted to integrate the [Webpack module bundler][webpack] to
 combine our CommonJS modules.
 
-However, we also wanted to keep the Sprockets default
-`config.assets.js_compressor = :uglify` as the last step in our build pipeline.
+However, we also wanted to keep the Sprockets as the last step in our build
+pipeline for the easy integration with Rails via the `asset_path` helpers.
 
 We ended up creating a prerequisite step in the asset precompilation process by
-using a bit of Rake trickery. Perhaps you will find it useful:
+using a bit of Rake trickery. It has been working pretty well for us, and
+perhaps you will find it useful:
 
 ~~~ ruby
 # lib/tasks/assets.rake
@@ -51,3 +53,5 @@ end
 [requirejs]: https://github.com/jrburke/requirejs
 [assetpipeline]: http://guides.rubyonrails.org/asset_pipeline.html
 [webpack]: https://github.com/webpack/webpack
+[polymer]: http://www.polymer-project.org/
+[react]: http://facebook.github.io/react/
