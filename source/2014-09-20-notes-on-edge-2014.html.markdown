@@ -1,0 +1,54 @@
+---
+title: Notes on 2014 EDGE Conference
+subtitle: The day when I hang out with people who write specs and make browsers.
+date: 2014/09/20
+category: conferences
+---
+
+Installable Apps and Permissions
+----
+"We don't have a very good design language to express apps on the web"
+  - can't specify name or icon
+There is an option on iOS to use `apple-mobile-web-app` <meta> tag, however it's usage is infrequent and is broken in many ways.
+The guy from Phone Gap said: "I don't think we should spend time making an abstraction that compiles to native UIs."
+As far as permissions go, there is i distinction between Security Questions (where the software can more-easily make an opinionated decision for the user) and Privacy Questions (where the user is responsible more directly for their own fate).
+
+Layout Performance
+----
+Android + iOS are built for a single reason: apps.
+Web is built for a very different one: documents.
+If we can't have it both ways, what is the primary use case of the web?
+
+- we need better layout benchmarks
+- after GPU improvements dry up, then where will we get our next 10x
+  improvement in performance? We don't see the answer to that yet.
+
+Security & Identity (mostly Security)
+----
+STARTTLS usage for SMTP is still increasing in adoption quickly
+Soon, Certificate Transparency will be required for all EV certificates.
+What is the future of the password?
+
+Package Management
+----
+Npm vs. Bower?
+
+Image Formats
+---
+<picture> tag,
+format fragmentation,
+content negotiation
+why no universal benchmarks for image quality / size to judge formats?
+
+Breakout Session
+----
+Identity
+Server Side Security
+CA
+
+Web Standards & Extensible Web Manifesto
+----
+Tying to iterate on the web quickly is hard
+Embrace the polyfill, and vendors building experimental features
+
+[1]: https://edgeconf.com/2014-sf

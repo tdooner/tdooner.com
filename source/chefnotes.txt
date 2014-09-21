@@ -1,0 +1,13 @@
+chef best practices
+
+- a run list defines the total state of a system
+  - contrasted with cookbooks, which should own installation/configuration of a
+    given system service
+
+- should be a list of cookbooks with no dependencies
+
+- use attributes
+
+
+java -jar /var/lib/gerrit/base/bin/gerrit.war init -d /var/lib/gerrit/base
+cd /var/lib/gerrit/base && sudo -ugerrit java -jar bin/gerrit.war reindex
