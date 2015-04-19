@@ -37,9 +37,8 @@
               %i.fa.fa-long-arrow-left
               Back to Blog
 
-          - unless current_page.data.hide_title
-            %h1= current_page.data.title
-            %h2= current_page.data.subtitle
+          %h1= current_page.data.title
+          %h2= current_page.data.subtitle
 
           = yield
 

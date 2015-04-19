@@ -1,15 +1,22 @@
 ---
-title: Blog
-hide_title: true
+title: Hi, I'm Tom
 ---
+
+I'm a Software Engineer and I want to make my government better.
+I work at
+%a{ href: 'http://brigade.com' } Brigade
+and also dabble on other random projects, including
+= succeed ',' do
+  %a{ href: 'http://opendisclosure.io' } OpenDisclosure
+a tool to analyze Oakland mayoral campaign contributions.
 
 - blog.articles[0...5].each do |article|
   %article
     %h3= link_to article.data.title, article.url
-    %h4= article.data.subtitle
-
-    %time= article.date.strftime('%b %e, %Y')
 
     = article.summary
 
-    %a{ href: article.url } Read More
+    %p
+      %a{ href: article.url } Read More
+      &middot;
+      %time= article.date.strftime('%b %e, %Y')
