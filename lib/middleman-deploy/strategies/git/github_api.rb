@@ -86,6 +86,11 @@ module Middleman
             return if File.directory?('.git')
 
             run_or_fail('git init')
+
+            unless `git config --global user.email`.chomp.length > 0
+              run_or_fail("git config --global user.name \"Tom Dooner\"")
+              run_or_fail("git config --global user.email tomdooner@gmail.com")
+            end
           end
 
           def commit_without_push
