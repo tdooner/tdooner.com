@@ -20,6 +20,7 @@ The web has had a rough history of attempts to enable offline apps.
 <iframe width="560" height="315" src="//www.youtube.com/embed/KfJfDNy_S5M" frameborder="0" allowfullscreen></iframe>
 
   - can't specify name or icon
+
 There is an option on iOS to use `apple-mobile-web-app` &lt;meta&gt; tag, however it's usage is infrequent and is broken in many ways.
 The guy from Phone Gap said: "I don't think we should spend time making an abstraction that compiles to native UIs."
 As far as permissions go, there is i distinction between Security Questions (where the software can more-easily make an opinionated decision for the user) and Privacy Questions (where the user is responsible more directly for their own fate).
