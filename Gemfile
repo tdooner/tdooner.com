@@ -12,6 +12,7 @@ gem 'compass-h5bp'
 gem 'font-awesome-middleman'
 gem 'nokogiri'
 gem 'builder'
+gem 'github_api'
 
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw]
@@ -22,4 +23,6 @@ group :development do
 
   # For faster file watcher updates on Windows:
   gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+
+  gem 'pry'
 end
