@@ -12,11 +12,17 @@ a tool to analyze Oakland mayoral campaign contributions.
 
 - blog.articles[0...5].each do |article|
   %article
-    %h3= link_to article.data.title, article.url
+    - if article.data.externalurl
+      %h3= link_to article.data.title, article.data.externalurl, target: '_new'
+    - else
+      %h3= link_to article.data.title, article.url
 
     = article.summary
 
     %p
-      %a{ href: article.url } Read More
+      - if article.data.externalurl
+        %a{ href: article.data.externalurl, target: '_new' } Read More
+      - else
+        %a{ href: article.url } Read More
       &middot;
       %time= article.date.strftime('%b %e, %Y')
