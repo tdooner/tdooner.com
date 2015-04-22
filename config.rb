@@ -2,7 +2,6 @@ Time.zone = 'Pacific Time (US & Canada)'
 
 require 'susy'
 require 'builder'
-require 'lib/middleman-deploy/strategies/git/github_api'
 
 # Change Compass configuration
 # compass_config do |config|
