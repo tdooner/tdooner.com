@@ -6,4 +6,4 @@ cache: bundler
 bundler_args: --without development
 script:
   - bundle exec middleman build
-  - bundle exec middleman deploy
+  - bundle exec middleman deploy 2>&1 | sed -e "s/$GITHUB_AUTH_TOKEN//"
