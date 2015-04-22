@@ -88,8 +88,6 @@ end
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.remote = "https://#{ENV['GITHUB_AUTH_TOKEN']}@github.com/tdooner/tdooner.com.git"
-  deploy.user_name = 'Tom Dooner'
-  deploy.user_email = 'tomdooner@gmail.com'
 end
 
 activate :blog do |blog|
