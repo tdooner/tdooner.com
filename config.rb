@@ -88,7 +88,7 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.strategy = :github_api
+  deploy.remote = "https://#{ENV['GITHUB_AUTH_TOKEN']}@github.com/tdooner/tdooner.com.git"
 end
 
 activate :blog do |blog|
