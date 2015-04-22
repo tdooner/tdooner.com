@@ -3,36 +3,42 @@ title: Notes on 2014 EDGE Conference
 subtitle: The day when I hang out with people who write specs and make browsers.
 date: 2014/09/20
 category: conferences
-published: false
+published: true
 ---
 
 On September 20th, I had the pleasure of attending the EDGE conference hosted
-by FT at Adobe's headquarters.
+by FT at Adobe's headquarters. Here are some notes I took from the many excellent
+sessions about web standards development.
 
 READMORE
 
 Installable Apps and Permissions
 ----
-The web has had a rough history of attempts to enable offline apps.
-
-"We don't have a very good design language to express apps on the web"
+The web has had a rough history of attempts at offline apps. Part of this is due
+to the lack of a design language on web. Even simple things like specifying an app
+name or icon are not standardized.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/KfJfDNy_S5M" frameborder="0" allowfullscreen></iframe>
 
-  - can't specify name or icon
+There is an option on iOS to use `apple-mobile-web-app` &lt;meta&gt; tag, however it's usage is infrequent and is broken in many ways. There is some debate about the approach the web should take&emdash;a guy from PhoneGap said "I don't think we should spend time making an abstraction that compiles to native UIs."
 
-There is an option on iOS to use `apple-mobile-web-app` &lt;meta&gt; tag, however it's usage is infrequent and is broken in many ways.
-The guy from Phone Gap said: "I don't think we should spend time making an abstraction that compiles to native UIs."
-As far as permissions go, there is i distinction between Security Questions (where the software can more-easily make an opinionated decision for the user) and Privacy Questions (where the user is responsible more directly for their own fate).
+Also, app permissions is a big unsolved question. There are two broad categories of permissions that the user could grant:
+
+* Security Questions (where software can make an opinionated decision for the user)
+* Privacy Questions (where the user is responsible more directly for their own fate)
+
+This creates complexity in attempts at a unified permissions model.
 
 Layout Performance
 ----
-Android + iOS are built for a single reason: apps.
-Web is built for a very different one: documents.
+Android + iOS are built for a single reason: apps. The web is built for a very different one: documents.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pi0UEgH9eA8?list=PLOU2XLYxmsIIlUmhjsPyZ6LIZbu0EzNoN" frameborder="0" allowfullscreen></iframe>
+
 If we can't have it both ways, what is the primary use case of the web?
 
-- we need better layout benchmarks
-- after GPU improvements dry up, then where will we get our next 10x
+- We need better layout benchmarks
+- After GPU improvements dry up, then where will we get our next 10x
   improvement in performance? We don't see the answer to that yet.
 
 Security & Identity (mostly Security)
@@ -41,26 +47,14 @@ STARTTLS usage for SMTP is still increasing in adoption quickly
 Soon, Certificate Transparency will be required for all EV certificates.
 What is the future of the password?
 
-Package Management
-----
-Npm vs. Bower?
-
-Image Formats
----
-<picture> tag,
-format fragmentation,
-content negotiation
-why no universal benchmarks for image quality / size to judge formats?
-
-Breakout Session
-----
-Identity
-Server Side Security
-CA
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OaqzLn4-pxk?list=PLOU2XLYxmsIIlUmhjsPyZ6LIZbu0EzNoN" frameborder="0" allowfullscreen></iframe>
 
 Web Standards & Extensible Web Manifesto
-----
-Tying to iterate on the web quickly is hard
-Embrace the polyfill, and vendors building experimental features
+---
+Tying to iterate on the web quickly is hard, and the "Extensible Web Manifesto" is a way to tackle this problem.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vl4q0Q9ucIs?list=PLOU2XLYxmsIIlUmhjsPyZ6LIZbu0EzNoN" frameborder="0" allowfullscreen></iframe>
+
+Basically, the gist is that we should embrace the polyfill and vendors building experimental features. Over time we will find out what works and then standardize based on an existing implementation. Browsers should be liberal in what they accept in case a different vendor decides to invent new properties.
 
 [1]: https://edgeconf.com/2014-sf
