@@ -5,4 +5,6 @@ category: ruby
 externalurl: https://medium.com/brigade-engineering/high-availability-sidekiq-with-redis-sentinel-2c562e65ecd2
 ---
 
-<a class="m-story" data-collapsed="true" href="https://medium.com/brigade-engineering/high-availability-sidekiq-with-redis-sentinel-2c562e65ecd2">High availability Sidekiq with Redis Sentinel</a>
+Setting up a Sidekiq queue tolerant of Redis failure has never been easier. This
+post will help you get your Ruby application connecting properly so you can reap
+the uptime benefits.
