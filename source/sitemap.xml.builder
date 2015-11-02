@@ -57,11 +57,12 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
 
         case page.url
           when '/index.html'
-            xml.changefreq 'daily'    # Set this to a suitable value for your site
+            xml.changefreq 'weekly'    # Set this to a suitable value for your site
           else
-            frontmatter_date = nil
-            frontmatter_date = page.data['date'].to_time.getlocal if defined?(page.data) && page.data['date']
-            xml.lastmod frontmatter_date.strftime("%Y-%m-%d")
+            if defined?(page.data) && page.data['date']
+              frontmatter_date = page.data['date'].to_time.getlocal
+              xml.lastmod frontmatter_date.strftime("%Y-%m-%d")
+            end
         end
 
         # Priority (priority)
