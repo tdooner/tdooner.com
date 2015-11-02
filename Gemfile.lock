@@ -37,7 +37,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    eventmachine (1.0.3)
+    eventmachine (1.0.8)
     execjs (2.5.2)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
@@ -64,7 +64,7 @@ GEM
     json (1.8.2)
     jwt (1.4.1)
     kramdown (1.6.0)
-    libv8 (3.16.14.3)
+    libv8 (3.16.14.13)
     listen (2.10.0)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
@@ -202,3 +202,6 @@ DEPENDENCIES
   therubyracer
   tzinfo-data
   wdm (~> 0.1.0)
+
+BUNDLED WITH
+   1.10.6
