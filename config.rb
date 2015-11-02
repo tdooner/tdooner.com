@@ -63,7 +63,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
 
-set :haml, ugly: false
+set :haml, ugly: true
 
 activate :syntax do |syntax|
   syntax.css_class = 'highlighted-code'
