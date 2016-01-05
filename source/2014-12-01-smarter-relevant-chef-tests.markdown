@@ -1,7 +1,8 @@
 ---
 title: Smarter, Relevant Chef Tests
 date: 2014/12/01
-category: chef
+category: technology
+tags: ruby, chef, open source
 externalurl: https://medium.com/brigade-engineering/smarter-relevant-chef-tests-ac998e957955
 ---
 

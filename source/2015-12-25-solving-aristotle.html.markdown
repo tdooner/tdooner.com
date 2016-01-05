@@ -1,7 +1,8 @@
 ---
 title: Solving "Aristotle's Number Puzzle" with Constraint Satisfaction
 date: 2015/12/25
-category: programming
+category: technology
+tags: puzzles, java
 published: false
 ---
 

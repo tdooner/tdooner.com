@@ -1,7 +1,8 @@
 ---
 title: High Availability Sidekiq with Redis Sentinel
 date: 2014/08/29
-category: ruby
+category: technology
+tags: ruby, ruby-on-rails, redis
 externalurl: https://medium.com/brigade-engineering/high-availability-sidekiq-with-redis-sentinel-2c562e65ecd2
 ---
 

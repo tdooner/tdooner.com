@@ -2,8 +2,8 @@
 title: Notes on 2014 EDGE Conference
 subtitle: The day when I hang out with people who write specs and make browsers.
 date: 2014/09/20
-category: conferences
-published: true
+category: technology
+tags: conferences, edge
 ---
 
 On September 20th, I had the pleasure of attending the EDGE conference hosted

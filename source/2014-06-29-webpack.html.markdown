@@ -2,7 +2,8 @@
 title: Webpack in the Rails Asset Pipeline
 subtitle: This snippet of code integrates Webpack into the Sprockets build process
 date: 2014/06/29
-category: ruby-on-rails
+category: technology
+tags: ruby, ruby-on-rails, webpack
 ---
 
 Rails applications have long had a unilateral asset compilation strategy
