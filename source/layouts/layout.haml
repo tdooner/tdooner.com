@@ -3,27 +3,27 @@
 /[if IE 7] <html class="no-js lt-ie9 lt-ie8">
 /[if IE 8] <html class="no-js lt-ie9">
 <!--[if gt IE 8]><!-->
-%html{:class => "no-js"}
+%html{ class: 'no-js' }
   <!--<![endif]-->
   %head
-    %meta{:charset => "utf-8"}
-    %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge"}
+    %meta{ charset: 'utf-8' }
+    %meta{ 'http-equiv' => 'X-UA-Compatible',  content: 'IE=edge'  }
     %title= current_page.data.title + " | Tom Dooner"
-    %meta{:name => "description", :content => current_page.data.subtitle}
-    %meta{:name => "author", :content => 'Tom Dooner'}
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %meta{ name: 'description', content: current_page.data.subtitle }
+    %meta{ name: 'author', content: 'Tom Dooner' }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
     = feed_tag :atom, '/feed.xml', title: 'Atom Feed'
     = stylesheet_link_tag "screen"
     = javascript_include_tag "all"
 
-  %body{:class => current_page.data.bodyclass}
+  %body{ class: current_page.data.bodyclass }
     /[if lt IE 8]
       %p.browsehappy
         You are using an <strong>outdated</strong> browser.
         Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 
     .container
-      #main-content{:role => "main"}
+      #main-content{ role: "main" }
         -# Page content gets rendered here
         %aside.left
           .bottom
