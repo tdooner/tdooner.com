@@ -43,20 +43,22 @@ page "/feed.xml", :layout => false
 #   activate :livereload
 # end
 
- helpers do
-   # Override link_to so that remote links open in new tabs.
-   # Conveniently, Kramdown is patched to use this link_to as well.
-   def link_to(*args, &block)
-     url = block_given? ? args[0] : args[1]
-     options = block_given? ? args[1] : args[2]
+helpers do
+  # Override link_to so that remote links open in new tabs.
+  # Conveniently, Kramdown is patched to use this link_to as well.
+  def link_to(*args, &block)
+    url = block_given? ? args[0] : args[1]
+    options = block_given? ? args[1] : args[2]
 
-     if url.start_with?('http')
-       options.merge!(target: '_blank')
-     end
+    if url.start_with?('http')
+      options.merge!(target: '_blank')
+    end
 
-     super
-   end
- end
+    super
+  end
+end
+
+set :base_url, 'https://www.tomdooner.com'
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
@@ -87,7 +89,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.deploy_method = :git
   deploy.remote = "https://#{ENV['GITHUB_AUTH_TOKEN']}@github.com/tdooner/tdooner.com.git"
 end
 

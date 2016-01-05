@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem "middleman"
-gem 'middleman-deploy'
+# no released version supports middleman 4.x yet:
+gem 'middleman-deploy', '>= 2.0.0.pre.alpha'
 gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'therubyracer'
