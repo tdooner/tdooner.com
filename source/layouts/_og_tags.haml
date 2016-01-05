@@ -1,0 +1,12 @@
+%meta{ property: 'og:url', content: URI.join(config.base_url, current_page.url) }
+- case current_page
+- when Middleman::Blog::BlogArticle
+  %meta{ property: 'og:type', content: 'article' }
+  %meta{ property: 'article:published_time', content: current_page.date.iso8601 }
+  - if current_page.data.updated_date
+    %meta{ property: 'article:modified_time', content: current_page.data.updated_date }
+  %meta{ property: 'article:author', content: 'Tom Dooner' }
+  - current_page.tags.each do |tag|
+    %meta{ property: 'article:tag', content: tag }
+- else
+  %meta{ property: 'og:type', content: 'website' }
