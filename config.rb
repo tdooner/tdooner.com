@@ -11,8 +11,9 @@ require 'builder'
 ###
 # Page options, layouts, aliases and proxies
 ###
-page "/sitemap.xml", :layout => false
-page "/feed.xml", :layout => false
+page "/sitemap.xml", layout: false
+page "/feed.xml", layout: false
+page '/CNAME', layout: false
 
 # Per-page layout changes:
 #

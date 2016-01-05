@@ -37,7 +37,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
 
       # Build xml of sitemap
       xml.url do
-        xml.loc 'https://www.tomdooner.com' + page.url   # TODO: possibly remove .html
+        xml.loc URI.join(config.base_url, page.url)
 
         # As usual, it's hard to get any solid information on how the search engines are
         # using the information in the site map. lastmod (last modified) and changefreq
