@@ -1,6 +1,7 @@
 ---
 title: Resolution
 date: 2016/01/03
+updated: 2016/01/04
 category: meta
 ---
 
@@ -18,6 +19,7 @@ boring—too technical or not technical enough. But right now, my audience is
 entirely my friends, and I'm going to peer pressure you into reading my
 thoughts anyways.
 
-So, subscribe to my RSS feed at [https://www.tomdooner.com/feed.xml] with your
-favorite feed reader (Newsblur? Feedly?), or watch [my
+So, subscribe to my RSS feed at
+[https://www.tomdooner.com/feed.xml](https://www.tomdooner.com/feed.xml) with
+your favorite feed reader (Newsblur? Feedly?), or watch [my
 Twitter](https://twitter.com/tomdooner)/Facebook for weekly updates.
