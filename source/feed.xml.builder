@@ -2,14 +2,14 @@ xml.instruct!
 # List of fields here:
 # http://atomenabled.org/developers/syndication/
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  xml.id URI.join(config.base_url, blog.options.prefix.to_s)
+  xml.id URI.join(config.base_url, '/')
   xml.title "Tom's Blog"
   xml.link "href" => URI.join(config.base_url, blog.options.prefix.to_s)
   xml.link "href" => URI.join(config.base_url, current_page.path), "rel" => "self"
   xml.updated(blog.articles.first.date.to_time.iso8601) unless blog.articles.empty?
   xml.author { xml.name "Tom Dooner" }
 
-  blog.articles[0..50].each do |article|
+  blog.articles.first(10).each do |article|
     xml.entry do
       xml.id URI.join(config.base_url, article.url)
       xml.title article.title
