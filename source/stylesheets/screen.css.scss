@@ -20,6 +20,8 @@ $color-dark-blue: #005f6b;
 $color-medium-blue: #008C9E;
 $left-column-width: 210px;
 
+$medium-grey: rgba(0, 0, 0, .3);
+
 body {
   background: $color-background;
   text-align: center;
@@ -29,7 +31,7 @@ body {
 }
 
 %grey-header {
-  color: rgba(0, 0, 0, .3);
+  color: $medium-grey;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1em;
@@ -65,6 +67,16 @@ a {
 
   &:hover {
     color: $color-dark-blue;
+  }
+}
+
+blockquote {
+  border-left: 2px solid $medium-grey;
+  padding-left: 1em;
+  margin: 0;
+
+  p {
+    white-space: pre;
   }
 }
 
