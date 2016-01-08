@@ -10,7 +10,7 @@ My parents got me a puzzle for Christmas titled _Aristotle's Number Puzzle_.
 The puzzle is simple: **arrange the numbers 1 through 19 pieces so that, across
 the large hexagon, every row sums to 38**.
 
-[picture of puzzle]
+![The Puzzle, in its box](/images/2016/aristotle_puzzle.jpg)
 
 Upon opening it, my first reaction was that it should be easy to solve this
 thing with a computer. Like hell I'm going to arduiously try to do this through
@@ -45,11 +45,11 @@ TODO: summarize a bit about how the constraints are solved
 We'll need a way to model our problem as a CSP. Let's start by assigning each
 hex a variable:
 
-[picture of aristotle's problem]
+![Giving each hex a letter a-z](/images/2016/aristotle_problem.png)
 
 At this point, the equations fall out pretty easily:
 
-```
+~~~
 a + b + c         = 38
 d + e + f + g     = 38
 h + i + j + k + l = 38
@@ -69,7 +69,7 @@ b + f + k + p     = 38
 c + g + l         = 38
 
 a != b != c != d != [...] != s
-```
+~~~
 
 If we constrain all our variables from 1 to 19, this means we'll make 15**19 =
 2.2e22 attempts at maximum. That is a lot, however, we can apply mathematic
@@ -110,29 +110,37 @@ enough for this problem's purposes, and has good documentation.
 
 # First Attempt at a Solution
 First, let's instantiate a solver instance:
-```java
+
+~~~ java
 Solver solver = new Solver("aristotle's number puzzle");
-```
+~~~
+
 Then, add the variables:
-```java
+
+~~~java
 // create a "fixed" variable for our answer, 38:
 IntVar sum = VariableFactory.fixed(38, solver);
 
 // create an array of 19 integer variables ranging 1 -> 19
 IntVar[] vars = VariableFactory.boundedArray("A", 19, 1, 19, solver);
-```
+~~~
+
 Next, I aliased some short names for these variables, so I could refer to them
-by name instead of by their array index: ```java
+by name instead of by their array index:
+
+~~~java
 IntVar a = vars[0];
 IntVar b = vars[1];
 IntVar c = vars[2];
 IntVar d = vars[3];
 // [...]
 IntVar s = vars[18];
-```
+~~~
+
 Then, using the "sum" constraint which accepts an arbitrary number of variables
 in an `IntVar[]` array, set up the constraints:
-```java
+
+~~~java
 // left -> right
 solver.post(IntConstraintFactory.sum(new IntVar[]{a, b, c}, sum));
 solver.post(IntConstraintFactory.sum(new IntVar[]{d, e, f, g}, sum));
@@ -153,12 +161,14 @@ solver.post(IntConstraintFactory.sum(new IntVar[]{d, i, n, r}, sum));
 solver.post(IntConstraintFactory.sum(new IntVar[]{a, e, j, o, s}, sum));
 solver.post(IntConstraintFactory.sum(new IntVar[]{b, f, k, p}, sum));
 solver.post(IntConstraintFactory.sum(new IntVar[]{c, g, l}, sum));
-```
+~~~
+
 We only need one more thing: the constraint that no two variables should be
 equal. Conveniently, this is supported by the Choco library:
-```java
+
+~~~java
 solver.post(IntConstraintFactory.alldifferent(vars));
-```
+~~~
 
 With those constraints, and a bit more boilerplate, Choco is able to solve the
 problem remarkably quickly: about 500ms on my Macbook Air. Since it took only
@@ -168,7 +178,8 @@ heavily optimizing the input equations. Cool!
 I daresay that my _first_ attempt at a solution will also be my _last_!
 
 Here's the solution:
-[picture]
+
+![The solution](/images/2016/aristotle_solution.png)
 
 All the code for this silly endeavor [is on Github
 here](https://github.com/tdooner/aristotle-solver-csp).
