@@ -26,13 +26,13 @@
 
     .container
       #main-content{ role: "main" }
-        -# Page content gets rendered here
-        %aside.left
-          .bottom
-            %p.name= link_to 'Tom Dooner', '/'
-            %p.title
-              Software Engineer
-              %a.company{ href: 'https://www.brigade.com', target: '_blank' } Brigade
+        - if current_page.url == '/'
+          %aside.left
+            .bottom
+              %p.name= link_to 'Tom Dooner', '/'
+              %p.title
+                Software Engineer
+                %a.company{ href: 'https://www.brigade.com', target: '_blank' } Brigade
 
         .right
           - unless current_page.url == '/'
