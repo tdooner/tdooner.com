@@ -17,6 +17,7 @@ gem 'font-awesome-middleman'
 gem 'nokogiri'
 gem 'builder'
 gem 'github_api'
+gem 'wkhtmltopdf'
 
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw]

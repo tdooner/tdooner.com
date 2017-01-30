@@ -1,0 +1,54 @@
+@import "compass";
+@import "h5bp";
+
+// HTML5 Boilerplate Styles
+@include h5bp-normalize;
+@include h5bp-base-styles;
+
+// Font Awesome icons
+@import "font-awesome";
+@import 'fira';
+@import 'highlight.css';
+
+.resume {
+  margin: 0 auto;
+  width: 840px;
+  font-size: 14px;
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+}
+
+.resume--header {
+  padding-top: 48px;
+}
+
+.resume--big-name {
+  font-size: 5em;
+  font-weight: 300;
+}
+
+.resume--big-title {
+  font-weight: 300;
+}
+
+.stack-visualization {
+  background-color: #efefef;
+  width: 100%;
+  list-style: none;
+  padding: 6px 0;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.stack-visualization--segment {
+  background-color: rgba(0, 255, 0, 0.2);
+  height: 12px;
+  flex-grow: 1;
+  margin: 0 4px;
+
+  &:hover {
+    background-color: rgb(0, 255, 0);
+  }
+}

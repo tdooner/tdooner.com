@@ -13,16 +13,14 @@ the large hexagon, every row sums to 38**.
 ![The Puzzle, in its box](/images/2016/aristotle_puzzle.jpg)
 
 Upon opening it, my first reaction was that it should be easy to solve this
-thing with a computer. Like hell I'm going to arduiously try to do this through
+thing with a computer. Like hell I'm going to arduously try to do this through
 trial-and-error if I can make electrons do it for me instead!
 
 > Work smarter, not harder
 > –My Mom
 
 Although this gift was _certainly_ designed to give its recipients a devilish
-couple hours of laboring, I'm far too impatient for that! (Maybe I'm just
-trying too hard [to be a virtuous
-programmer](http://c2.com/cgi/wiki?LazinessImpatienceHubris)...)
+couple hours of laboring, I'm far too impatient for that!
 
 # The Challenge
 When thinking of how to accomplish this puzzle, modelling it as a [Constraint

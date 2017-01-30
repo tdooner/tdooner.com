@@ -1,0 +1,82 @@
+{
+  "basics": {
+    "name": "Tom Dooner",
+    "label": "Software Engineer",
+    "email": "tomdooner@gmail.com",
+    "website": "https://www.tomdooner.com",
+    "summary": "I'm a software engineer with an odd fascination with government. I work at Brigade and am a longtime volunteer for OpenOakland, working on  OpenDisclosure, a tool for visualizing campaign finance data.",
+    "location": {
+      "city": "San Francisco"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "tomdooner",
+        "url": "https://twitter.com/tomdooner"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Tom Dooner",
+        "url": "https://www.linkedin.com/in/tom-dooner-6a84bb23"
+      },
+      {
+        "network": "GitHub",
+        "username": "tdooner",
+        "url": "https://github.com/tdooner"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Brigade",
+      "position": "Software Engineer",
+      "website": "https://www.brigade.com",
+      "startDate": "June 2014",
+      "summary": "Working at a growing company like Brigade has given me a lot of latitude to contribute to many parts of the stack. I've worked primarily on three teams over the course of my two years here.",
+      "highlights": [
+        "Near the beginning of Brigade, I was part of the Ops team which developed and maintained the initial infrastructure Chef cookbooks",
+        "As the infrastructure stabilized, I worked with the API team to build various backend features into our REST API",
+        "Lately, I have been part of the Web team building user-facing features in our React JS codebase"
+      ]
+    },
+    {
+      "company": "Causes",
+      "position": "Software Engineer",
+      "website": "https://www.causes.com",
+      "startDate": "July 2013",
+      "endDate": "June 2014",
+      "summary": "I developed new features for Causes, a Rails app dedicated to giving people an online place to fight for what they believe in. Causes was acquired by Brigade in June 2014."
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "OpenOakland",
+      "position": "Volunteer",
+      "startDate": "February 2014",
+      "summary": "I have been working on the OpenDisclosure team. We're building a website (http://opendisclosure.io) which tracks campaign finance contributions at the local level."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Case Western Reserve University",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
+      "startDate": "2009-08-02",
+      "endDate": "2013-05-07"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "keywords": [
+        "Ruby on Rails", "Javascript"
+      ]
+    },
+    {
+      "name": "Operations",
+      "keywords": [
+        "Chef", "Enough Bash To Be Dangerous"
+      ]
+    }
+  ]
+}

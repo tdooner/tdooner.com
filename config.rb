@@ -14,6 +14,7 @@ require 'builder'
 page "/sitemap.xml", layout: false
 page "/feed.xml", layout: false
 page '/CNAME', layout: false
+page '/resume.html', layout: 'resume'
 
 # Per-page layout changes:
 #

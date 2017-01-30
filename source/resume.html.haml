@@ -1,0 +1,15 @@
+- json = JSON.load(File.read('source/resume.json'))
+.resume
+  %section.resume--header
+    %h1.resume--big-name= json['basics']['name']
+    %h2.resume--big-title= json['basics']['label']
+
+  %ul.stack-visualization
+    %li.stack-visualization--segment
+      -# devops
+    %li.stack-visualization--segment
+      -# api / ruby on rails
+    %li.stack-visualization--segment
+      -# frontend
+    %li.stack-visualization--segment
+      -# product
