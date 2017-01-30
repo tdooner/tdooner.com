@@ -3,6 +3,7 @@ title: Resolution
 date: 2016/01/03
 updated: 2016/01/04
 category: meta
+published: false
 ---
 
 Hello from the darkness.
