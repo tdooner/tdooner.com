@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.3.0'
 
 gem "middleman"
 # no released version supports middleman 4.x yet:
