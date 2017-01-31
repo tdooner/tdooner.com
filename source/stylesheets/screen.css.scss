@@ -120,7 +120,7 @@ $left-column-padding: 20px;
 }
 
 .right {
-  margin: 2em 0 0 ($left-column-width + 2 * $left-column-padding);
+  margin: 2em 0 100px ($left-column-width + 2 * $left-column-padding);
   text-align: left;
   width: 800px;
 }
