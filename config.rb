@@ -58,6 +58,11 @@ helpers do
 
     super
   end
+
+  # Removes HTML tags, leaving the inner text.
+  def sanitize(html)
+    Nokogiri::HTML(html).xpath('//text()').to_s
+  end
 end
 
 set :base_url, 'https://www.tomdooner.com'
