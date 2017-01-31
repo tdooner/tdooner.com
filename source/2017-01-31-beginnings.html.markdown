@@ -1,6 +1,6 @@
 ---
 title: Beginnings
-date: 2017/01/30
+date: 2017/01/31
 category: updates
 tags: civic-tech, code-for-america, politics
 ---
