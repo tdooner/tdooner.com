@@ -4,20 +4,15 @@
     "label": "Software Engineer",
     "email": "tomdooner@gmail.com",
     "website": "https://www.tomdooner.com",
-    "summary": "I'm a software engineer with an odd fascination with government. I work at Brigade and am a longtime volunteer for OpenOakland, working on  OpenDisclosure, a tool for visualizing campaign finance data.",
+    "summary": "I'm a software engineer working on projects to improve the way Americans interact with government.",
     "location": {
       "city": "San Francisco"
     },
     "profiles": [
       {
         "network": "Twitter",
-        "username": "tomdooner",
+        "username": "@tomdooner",
         "url": "https://twitter.com/tomdooner"
-      },
-      {
-        "network": "LinkedIn",
-        "username": "Tom Dooner",
-        "url": "https://www.linkedin.com/in/tom-dooner-6a84bb23"
       },
       {
         "network": "GitHub",
@@ -28,15 +23,29 @@
   },
   "work": [
     {
+      "company": "Code for America",
+      "position": "Software Engineer Fellow",
+      "website": "https://www.codeforamerica.org",
+      "startDate": "February 2017",
+      "endDate": "October 2017",
+      "summary": "A unique nine-month working experience on a two-person team to design and build a product from scratch for Multnomah County (Portland, OR). We tackled the problem of helping crime victims get access to resources and support at any stage of the justice system.",
+      "highlights": [
+        "We created <a href='https://casecompanion.org'>Case Companion</a>, an application that integrates data from the state prison system, local probation system, and the District Attorney's office and presents it to users in a trauma-informed and contextual way.",
+        "Designed and began implementation of a proactive messaging campaign so crime victims would always know who they could call and what would come next for their case in the justice system."
+      ]
+    },
+    {
       "company": "Brigade",
       "position": "Software Engineer",
       "website": "https://www.brigade.com",
       "startDate": "June 2014",
-      "summary": "Working at a growing company like Brigade has given me a lot of latitude to contribute to many parts of the stack. I've worked primarily on three teams over the course of my two years here.",
+      "endDate": "November 2016",
+      "summary": "Brigade connects voters with each other as a platform for opinion expression, taking action, and holding elected officials accountable. Working at a growing company like Brigade afforded me a lot of opportunity to contribute to many parts of the stack, depending on whatever the company needed at the time.",
       "highlights": [
-        "Near the beginning of Brigade, I was part of the Ops team which developed and maintained the initial infrastructure Chef cookbooks",
-        "As the infrastructure stabilized, I worked with the API team to build various backend features into our REST API",
-        "Lately, I have been part of the Web team building user-facing features in our React JS codebase"
+        "Near the beginning of Brigade, I was part of the Ops team which deployed and maintained the initial infrastructure with automation tools like Chef and Terraform.",
+        "I led the deployment of a microservices architecture (using Apache Mesos) to allow developers to quickly deploy high-performance applications",
+        "As the infrastructure stabilized, I moved to the API team to build various features into our REST API built with Rails.",
+        "I later moved to the Web team to build user-facing product features in our React codebase."
       ]
     },
     {
@@ -53,7 +62,7 @@
       "organization": "OpenOakland",
       "position": "Volunteer",
       "startDate": "February 2014",
-      "summary": "I have been working on the OpenDisclosure team. We're building a website (http://opendisclosure.io) which tracks campaign finance contributions at the local level."
+      "summary": "I have been working on the <a href='https://opendisclosure.io'>OpenDisclosure</a> team. We're building a website which tracks and visualizes campaign finance contributions at the local level."
     }
   ],
   "education": [
@@ -69,13 +78,13 @@
     {
       "name": "Web Development",
       "keywords": [
-        "Ruby on Rails", "Javascript"
+        "Ruby on Rails", "Javascript (React)"
       ]
     },
     {
       "name": "Operations",
       "keywords": [
-        "Chef", "Enough Bash To Be Dangerous"
+        "Chef", "MySQL", "PostgreSQL", "Enough Bash to be dangerous"
       ]
     }
   ]

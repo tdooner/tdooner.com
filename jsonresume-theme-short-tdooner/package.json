@@ -1,0 +1,78 @@
+{
+  "_args": [
+    [
+      "jsonresume-theme-short",
+      "/Users/tomdooner/dev/ruby/tdooner.com"
+    ]
+  ],
+  "_from": "jsonresume-theme-short@*",
+  "_id": "jsonresume-theme-short@0.1.7",
+  "_inCache": true,
+  "_location": "/jsonresume-theme-short",
+  "_nodeVersion": "0.10.32",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/jsonresume-theme-short-0.1.7.tgz_1459584289615_0.9664535750634968"
+  },
+  "_npmUser": {
+    "email": "hello@graememaciver.com",
+    "name": "isnotahippy"
+  },
+  "_npmVersion": "2.1.4",
+  "_phantomChildren": {
+    "amdefine": "1.0.0",
+    "wordwrap": "0.0.3"
+  },
+  "_requested": {
+    "name": "jsonresume-theme-short",
+    "raw": "jsonresume-theme-short",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/jsonresume-theme-short/-/jsonresume-theme-short-0.1.7.tgz",
+  "_shasum": "fbb914d8b07157a8df4af93e57560af0c5f507a3",
+  "_shrinkwrap": null,
+  "_spec": "jsonresume-theme-short",
+  "_where": "/Users/tomdooner/dev/ruby/tdooner.com",
+  "author": {
+    "name": "Graeme Maciver"
+  },
+  "bugs": {
+    "url": "https://github.com/isnotahippy/jsonresume-theme-short/issues"
+  },
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4"
+  },
+  "description": "Simple to the point theme for JSON Resume",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "fbb914d8b07157a8df4af93e57560af0c5f507a3",
+    "tarball": "https://registry.npmjs.org/jsonresume-theme-short/-/jsonresume-theme-short-0.1.7.tgz"
+  },
+  "gitHead": "1dc7aa70384e956fdb48e4ff1a477d466f1165e8",
+  "homepage": "https://github.com/isnotahippy/jsonresume-theme-short",
+  "installable": true,
+  "license": "MIT",
+  "maintainers": [
+    {
+      "email": "hello@graememaciver.com",
+      "name": "isnotahippy"
+    }
+  ],
+  "name": "jsonresume-theme-short",
+  "optionalDependencies": {},
+  "readme": "# Boilerplate theme [![](https://badge.fury.io/js/jsonresume-theme-boilerplate.png)](https://www.npmjs.org/package/jsonresume-theme-boilerplate)\n\nThis is the boilerplate theme for [JSON Resume](http://jsonresume.org/).\n\n## Getting started\n\nTo get started with theme development, this is what you'll need:\n\n- [node.js](http://howtonode.org/how-to-install-nodejs)\n- [npm](http://howtonode.org/introduction-to-npm)\n\nIf you're on Linux, you can simply run:\n\n```\nsudo apt-get install nodejs-legacy npm\n```\n\nOr if you're on OSX and got [Homebrew](http://brew.sh/) installed:\n```\nbrew install node\n```\n\n### Install the command line\n\nWe're going to use the official [resume-cli](https://github.com/jsonresume/resume-cli) to run our development server.\n\nGo ahead and install it:\n\n```\nsudo npm install -g resume-cli\n```\n\n### Download theme\n\nLets go ahead and download a [copy of the repository](https://github.com/jsonresume/jsonresume-theme-boilerplate/archive/master.zip).\n\n### Install npm packages\n\nWe need to install the dependencies. `cd` into the theme folder we just downloaded and run:\n\n```bash\nsudo npm install\n```\n\nThis will read the local `package.json` and install the packages listed under `dependencies`.\n\n### Serve theme\n\nWhile inside the theme folder, simply run:\n\n```\nresume serve\n```\n\nYou should now see this message:\n\n```\nPreview: http://localhost:4000\nPress ctrl-c to stop\n```\n\nCongratulations, you've made it!\n\n__The theme development can now begin.__\n\n## Development\n\n### Overview\n\nNow that you have your boilerplate theme installed, go through a quick overview of each of the files needed for your JSONResume theme:\n\n* `package.json`: Your package.json is required by all npm packages. Everytime you want to release a new update of your theme, you'll need to update it's version number.\n* `index.js`: This is the file that will return the needed HTML to the theme server. You can use it to process some things with your theme first, but we'll talk about that a bit later.\n* `resume.template`: This is your actual template. This file is sent to the `index.js` for it to sent to the theme server.\n* `style.css`: This is where all the CSS of your project goes. Since the `index.js` only returns HTML, the contents of this file are put between `<style>` tags in your `resume.template` file.\n\nIn order to get values from an actual JSONResume, you'll need to use a templating system, such as [Mustache](http://mustache.github.io/) or [Handlebars](http://handlebarsjs.com/). The default boilerplate theme uses Handlebars.\n\n### package.json\n\nBecause you'll need to publish this as your own soon, you'll need to change some of the fields. You can replace the name field with your own theme name, so long as it starts with `jsonresume-theme-`. This prefix will allow your theme to be found by the theme server during deployment.\n\nNext, you'll want to change the description and author. You can change the description to anything you'd like, and the author should be your name.\n\nIf you are also putting your theme up on Github, you'll probably want to keep the repository field, but replace the url with your own.\n\nLastly, you can put all of your theme dependencies in the `dependencies` field. As you can see, we already have [Handlebars](http://handlebarsjs.com/) as one of the dependencies. If you wish not to use Handlebars, you may remove this, and replace it with another templating system.\n\n### index.js\n\nThe `index.js` is where all the compiliing of your theme, and neccessary edits will go.\n\nAt the top, you can already see the Node.js `require` function being used with the dependencies. You can obviously add own dependencies, if you are planning on using a different templating system, you can remove it.\n\nThe most important part of `index.js` is the `render` function. This is where all the compilation goes. This render function is expected to take a resume object (from a `resume.json`), and should return HTML. In this case, it is returning a compiled Handlebars document. If you removed the Handlebars dependency, you'll want to remove it and replace it with your own templating system compilation.\n\nAbove the `return` line are css and template variables. Using the Node.js `fs` module, it reads first the `style.css` and the `resume.template`.\n\n### resume.template\n\nThe `resume.template` file is where the actual template is. It contains all of the markup needed for your resume. By default, this is a Handlebars document, but it can obviously be changed into a different templating document.\n\n### style.css\n\nLast but not least, the `style.css` defines your styles. Technically, this is completely optional, as you could just write all of your styles in the `<style>` tags of your `resume.template`. As the `index.js`, the contents of the `style.css` are put into the `<style>` tags of your compiled theme later, yet again, this is something can change.\n\n## Deployment\n\nIf you are familar with NPM, you should be done with this in no time.\n\nIf you already have an NPM account, you can run `npm login` and enter your username and password. If not, you can run `npm adduser` and fill in the proper fields.\n\nIf you changed the dependencies or added new ones, you'll want to run `npm install` again, and just to make sure, run `npm update` to get the latest version of each dependency.\n\nWhen you are done with that, you may go into your package.json, and edit the version number. When all of the above is finished, you may run `npm publish` to release your theme to the public. Now everyone can use your theme with their resume.\n\nWhen updating your theme, you'll need to change the version number and run `npm publish` again.\n\n## License\n\nAvailable under [the MIT license](http://mths.be/mit).\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isnotahippy/jsonresume-theme-short.git"
+  },
+  "scripts": {},
+  "version": "0.1.7"
+}
