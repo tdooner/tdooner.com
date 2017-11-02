@@ -10,6 +10,13 @@ const RESUME_PATH =
   await page.pdf({
     path: 'build/resume.pdf',
     format: 'Letter',
+    margin: {
+      top: '.5in',
+      bottom: '.5in',
+
+      left: '1in',
+      right: '1in',
+    }
   });
   console.log('Done!');
 

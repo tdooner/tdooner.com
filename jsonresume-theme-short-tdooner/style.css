@@ -22,15 +22,18 @@ ul {
 }
 section {
   margin: 1em 0 2em;
+  page-break-inside: avoid;
 }
 blockquote {
   margin: 0;
   margin-bottom: 1em;
 }
 
-#resume {
-  margin: 4em 6em;
-  max-width: 760px;
+@media (screen) {
+  #resume {
+    margin: 4em 6em;
+    max-width: 760px;
+  }
 }
 
 /* Resume heading */

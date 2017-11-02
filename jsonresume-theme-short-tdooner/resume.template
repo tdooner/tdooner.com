@@ -136,47 +136,43 @@
   </section>
   {{/if}}
 
-  <div class="layout--2col">
-    {{#if resume.volunteer.length}}
-    <section class="experience">
-      <h2>Volunteering</h2>
-      {{#each resume.volunteer}}
-      <div class="item">
-        <header>
-          {{#if organization}}
-            <h3 class="name">{{organization}}</h3>
-          {{/if}}
-        </header>
-        {{#if position}}
-        <span class="position">
-          {{position}}
-        </span>
+  {{#if resume.volunteer.length}}
+  <section class="experience" style="padding-top: 1.5em">
+    <h2>Volunteering</h2>
+    {{#each resume.volunteer}}
+    <div class="item">
+      <header>
+        {{#if organization}}
+          <h3 class="name">{{organization}}</h3>
         {{/if}}
-
-        {{#if startDate}}
-        <span class="startDate">
-          {{date startDate}}{{#if endDate}}–{{date endDate}}{{else}}–Present{{/if}}
-        </span>
-        {{/if}}
-
-        {{#if summary}}
-        <div class="summary">
-          <p>{{{summary}}}</p>
-        </div>
-        {{/if}}
-        {{#if highlights.length}}
-        <ul class="highlights">
-          {{#each highlights}}
-          <li>{{{.}}}</li>
-          {{/each}}
-        </ul>
-        {{/if}}
+      </header>
+      {{#if position}}
+      <span class="position">
+        {{position}}
+      </span>
+      {{/if}}
+      {{#if startDate}}
+      <span class="startDate">
+        {{date startDate}}{{#if endDate}}–{{date endDate}}{{else}}–Present{{/if}}
+      </span>
+      {{/if}}
+      {{#if summary}}
+      <div class="summary">
+        <p>{{{summary}}}</p>
       </div>
-      {{/each}}
+      {{/if}}
+      {{#if highlights.length}}
+      <ul class="highlights">
+        {{#each highlights}}
+        <li>{{{.}}}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+    {{/each}}
     </section>
     {{/if}}
     
-
     {{#if resume.education.length}}
     <section id="education">
       <h2>Education</h2>
@@ -184,7 +180,7 @@
       <div class="item">
         <header>
           {{#if institution}}
-            <h3 class="name">{{institution}}</h3>
+          <h3 class="name">{{institution}}</h3>
           {{/if}}
         </header>
 
@@ -197,30 +193,36 @@
         </div>
 
         <p>
-          {{#if studyType}}
-          <span class="studyType">
-            {{studyType}}
-          </span>
-          {{/if}}
+        {{#if studyType}}
+        <span class="studyType">
+          {{studyType}}
+        </span>
+        {{/if}}
 
-          {{#if area}}
-          <span class="area">
-            – {{area}}
-          </span>
-          {{/if}}
+        {{#if area}}
+        <span class="area">
+          – {{area}}
+        </span>
+        {{/if}}
 
-          {{#if gpa}}
-          <span class="gpa">
-            GPA: {{gpa}}
-          </span>
-          {{/if}}
+        {{#if gpa}}
+        <span class="gpa">
+          GPA: {{gpa}}
+        </span>
+        {{/if}}
         </p>
 
-      </div>
-      {{/each}}
+        <div class="summary">
+          <ul class="highlights">
+            {{#each highlights}}
+            <li>{{{.}}}</li>
+            {{/each}}
+          </ul>
+
+        </div>
+        {{/each}}
     </section>
     {{/if}}
-  </div>
   
   {{#if resume.awards.length}}
   <section id="awards">
@@ -348,6 +350,16 @@
       </div>
       {{/if}}
     </div>
+    {{/each}}
+  </section>
+  {{/if}}
+
+  {{#if resume.other.length}}
+  <section id="other">
+    <h2>Other Things About Me</h2>
+
+    {{#each resume.other}}
+    <p>{{.}}</p>
     {{/each}}
   </section>
   {{/if}}
