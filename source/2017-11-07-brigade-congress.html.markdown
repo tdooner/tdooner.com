@@ -98,7 +98,9 @@ How can we engage city partners
 
 https://twitter.com/Ryan_Koch/status/919250944675799040
 
-Tools to use (like journey maps)
+Tools to use (like journey maps) via Code for Orlando's <a href="https://twitter.com/ErinFonziDenton">@ErinFonziDenton</a>
+
+https://twitter.com/codeforamerica/status/919266564892971008
 
 https://twitter.com/Ryan_Koch/status/919266578641965062
 
