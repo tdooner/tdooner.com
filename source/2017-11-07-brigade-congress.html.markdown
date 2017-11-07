@@ -109,7 +109,7 @@ Brigade Congress was a great event, and a great opportunity for us in Brigades t
 
 https://twitter.com/SFbrigade/status/919613849120182272
 
-With this in mind, and all the connections coming out of the event, the network has never been poised for more success. Now, we just need to keep up the momentum!
+With this in mind, and all the connections coming out of the event, the network has never been poised for more success. Let's keep up the momentum, work together, and make our governments work for the people!
 
 [1]: https://civichall.org/civicist/recharging-the-brigade-code-for-americas-challenge/
 [nac]: https://medium.com/code-for-america/national-advisory-council-election-results-and-next-steps-54c53ece6ae2
