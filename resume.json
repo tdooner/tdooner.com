@@ -1,0 +1,116 @@
+{
+  "basics": {
+    "name": "Tom Dooner",
+    "label": "Software Engineer",
+    "email": "tomdooner@gmail.com",
+    "website": "https://tomdooner.com",
+    "summary": "I'm a software engineer working on projects to improve the way Americans interact with government.",
+    "location": {
+      "city": "San Francisco"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "@tomdooner",
+        "url": "https://twitter.com/tomdooner"
+      },
+      {
+        "network": "GitHub",
+        "username": "tdooner",
+        "url": "https://github.com/tdooner"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Code for America",
+      "position": "Software Engineer Fellow",
+      "website": "https://www.codeforamerica.org",
+      "startDate": "February 2017",
+      "endDate": "October 2017",
+      "summary": "A unique nine-month working experience on a two-person team to design and build a product from scratch for Multnomah County (Portland, OR). We tackled the problem of helping crime victims get access to resources and support at any stage of the justice system.",
+      "highlights": [
+        "We created <a href='https://casecompanion.org'>Case Companion</a>, an application that integrates data from the state prison system, local probation system, and the District Attorney's office and presents it to users in a trauma-informed and contextual way.",
+        "Designed and began implementation of a proactive messaging campaign for crime victims to be informed of progress and changes to their case in the justice system, and who they could contact for more information.",
+        "Demonstrated a user-centered design approach by interviewing members of the public who had been personally affected by major crimes. We advocated for our government partner to continue with this approach after the project ended."
+      ]
+    },
+
+    {
+      "company": "Brigade",
+      "position": "Software Engineer",
+      "website": "https://www.brigade.com",
+      "startDate": "June 2014",
+      "endDate": "November 2016",
+      "summary": "<a href='https://brigade.com'>Brigade</a> connects voters on a platform for opinion expression, taking action, and holding elected officials accountable. Working at a growing company like Brigade afforded me a lot of opportunity to contribute to many parts of the stack, depending on whatever the company needed at the time.",
+      "highlights": [
+        "Near the beginning of Brigade, I was part of the Ops team which deployed and maintained the initial infrastructure with automation tools like Chef and Terraform.",
+        "I led the deployment of a microservices architecture (using Apache Mesos) to allow developers to quickly deploy high-performance applications",
+        "As the infrastructure stabilized, I moved to the API team to build various features into our REST API built with Rails.",
+        "Later, I moved to the Web frontend team to build user-facing product features in our React codebase."
+      ]
+    },
+
+    {
+      "company": "Causes",
+      "position": "Software Engineer",
+      "website": "https://www.causes.com",
+      "startDate": "July 2013",
+      "endDate": "June 2014",
+      "summary": "I developed new user-facing features for Causes, a Rails app dedicated to giving people an online place to fight for what they believe in.",
+      "highlights": [
+        "Causes was one of the first apps on Facebook, which presented challenges as it was both a five-year-old codebase when I joined and also had 180 million users.",
+        "One major feature I worked on was rebuilding the donation flow in a way that integrated with the legacy code but was also dramatically simpler by integrating with Stripe.",
+        "Causes was acquired by Brigade in June 2014."
+      ]
+    }
+  ],
+
+  "volunteer": [
+    {
+      "organization": "OpenOakland",
+      "position": "Hack Night Lead/Engineer",
+      "startDate": "February 2014",
+      "summary": "OpenOakland is a volunteer organization working to build technology to help Oaklanders understand and interact with their government.",
+      "highlights": [
+        "I work on the <a href='https://opendisclosure.io'>OpenDisclosure</a> project, and am the lead engineer. OpenDisclosure tracks and visualizes campaign finance contributions at the local level and will eventually aggregate many jurisdictions' data together to provide a picture of all of California.",
+        "In October 2016, I was elected to the Hack Night Lead position, which is responsible for managing our (roughly) eight projects and leading our weekly hack night."
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Case Western Reserve University",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
+      "startDate": "2009-08-02",
+      "endDate": "2013-05-07",
+      "highlights": [
+        "Undergraduate Student Government",
+        "Hackers Society",
+        "Humans vs. Zombies"
+      ]
+    }
+  ],
+
+  "skills": [
+    {
+      "name": "Web Development",
+      "keywords": [
+        "Ruby on Rails", "Javascript (React)"
+      ]
+    },
+    {
+      "name": "Operations",
+      "keywords": [
+        "Chef", "MySQL", "PostgreSQL", "Enough Bash to be dangerous"
+      ]
+    }
+  ],
+
+  "other": [
+    "Hello! I grew up and went to school in Cleveland, OH and moved out to San Francisco to have opportunities to work on great problems with great people.",
+    "On the weekends, you're likely to find me find me running around the area🏃, enjoying some craft beer🍻, or singing along to some folksy rock music 🎶."
+  ]
+}

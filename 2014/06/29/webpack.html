@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js'>
+<!--<![endif]-->
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<title>Webpack in the Rails Asset Pipeline | Tom Dooner</title>
+<meta content='This snippet of code integrates Webpack into the Sprockets build process' name='description'>
+<meta content='Tom Dooner' name='author'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='https://www.tomdooner.com/2014/06/29/webpack.html' property='og:url'>
+<meta content='article' property='og:type'>
+<meta content='Webpack in the Rails Asset Pipeline' property='og:title'>
+<meta content='Rails applications have long had a unilateral asset compilation strategy provided by Sprockets (as a part of Ruby...' property='og:description'>
+<meta content='2014-06-29T00:00:00-07:00' property='article:published_time'>
+<meta content='ruby' property='article:tag'>
+<meta content='ruby-on-rails' property='article:tag'>
+<meta content='webpack' property='article:tag'>
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="/rss.xml" />
+<link href="../../../stylesheets/screen-97d07a5a.css" rel="stylesheet" />
+<script src="../../../javascripts/all-d38432b3.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class='browsehappy'>
+You are using an <strong>outdated</strong> browser.
+Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+<div class='container'>
+<div id='main-content' role='main'>
+<div class='right'>
+<a class="back-to-blog" href="/"><i class='fa fa-long-arrow-left'></i>
+Back to Blog
+</a><h1>Webpack in the Rails Asset Pipeline</h1>
+<h2>This snippet of code integrates Webpack into the Sprockets build process</h2>
+<p>Rails applications have long had a unilateral asset compilation strategy
+provided by Sprockets (as a part of <a target="_blank" href="http://guides.rubyonrails.org/asset_pipeline.html">Ruby on Rails's Asset
+Pipeline</a>).  However, as the depth of JavaScript
+<a target="_blank" href="https://github.com/jrburke/requirejs">build</a> <a target="_blank" href="https://github.com/gruntjs/grunt">tools</a> increases, application authors can and should
+take advantage of more diverse asset combination techniques than what Sprockets
+is designed to provide. This can lead to better long-term maintainability
+through modularity of frontend components (which is <a target="_blank" href="http://www.polymer-project.org/">all the rage</a>
+<a target="_blank" href="http://facebook.github.io/react/">these days</a>).</p>
+
+<p>At Brigade, we wanted to integrate the <a target="_blank" href="https://github.com/webpack/webpack">Webpack module bundler</a> to
+combine our CommonJS modules.</p>
+
+<p>However, we also wanted to keep the Sprockets as the last step in our build
+pipeline for the easy integration with Rails via the <code>asset_path</code> helpers.</p>
+
+<p>We ended up creating a prerequisite step in the asset precompilation process by
+using a bit of Rake trickery. It has been working pretty well for us, and
+perhaps you will find it useful:</p>
+
+<pre class="highlighted-code ruby"><code><span class="c1"># lib/tasks/assets.rake</span>
+<span class="c1"># The webpack task must run before assets:environment task.</span>
+<span class="c1"># Otherwise Sprockets cannot find the files that webpack produces.</span>
+<span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="p">[</span><span class="s1">'assets:precompile'</span><span class="p">]</span>
+  <span class="p">.</span><span class="nf">clear_prerequisites</span>
+  <span class="p">.</span><span class="nf">enhance</span><span class="p">([</span><span class="s1">'assets:compile_environment'</span><span class="p">])</span>
+
+<span class="n">namespace</span> <span class="ss">:assets</span> <span class="k">do</span>
+  <span class="c1"># In this task, set prerequisites for the assets:precompile task</span>
+  <span class="n">task</span> <span class="ss">:compile_environment</span> <span class="o">=&gt;</span> <span class="ss">:webpack</span> <span class="k">do</span>
+    <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="p">[</span><span class="s1">'assets:environment'</span><span class="p">].</span><span class="nf">invoke</span>
+  <span class="k">end</span>
+
+  <span class="n">desc</span> <span class="s1">'Compile assets with webpack'</span>
+  <span class="n">task</span> <span class="ss">:webpack</span> <span class="k">do</span>
+    <span class="n">sh</span> <span class="s1">'$(npm bin)/webpack --config webpack.config.js'</span>
+  <span class="k">end</span>
+
+  <span class="n">task</span> <span class="ss">:clobber</span> <span class="k">do</span>
+    <span class="n">rm_rf</span> <span class="s2">"</span><span class="si">#{</span><span class="n">app</span><span class="p">.</span><span class="nf">config</span><span class="p">.</span><span class="nf">root</span><span class="si">}</span><span class="s2">/app/assets/javascripts/{bundle.js,components.js}"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+
+</div>
+</div>
+</div>
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-586893-1');ga('send','pageview');
+</script>
+</body>
+</html>
