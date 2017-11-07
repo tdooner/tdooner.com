@@ -25,6 +25,7 @@ body {
   background: $color-background;
   text-align: center;
   font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+  font-size: 20px;
   padding-right: 60px;
   line-height: 1.6em;
 }
@@ -43,6 +44,10 @@ h1 {
 
   font-size: 70px;
   margin: 0;
+}
+
+h2 {
+  font-size: 26px;
 }
 
 h3 {
@@ -71,12 +76,16 @@ a {
 
 blockquote {
   border-left: 2px solid $medium-grey;
-  padding-left: 1em;
+  padding: 1em 1em 1em 2em;
   margin: 0;
 
   p {
     white-space: pre;
   }
+}
+
+p {
+  margin-bottom: 2em;
 }
 
 .back-to-blog {
